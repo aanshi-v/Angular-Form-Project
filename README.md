@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/63b0df61-1c52-4027-962a-2cc14f2a6761)# Angular 16 Registration Homepage
+# Angular 16 Registration Homepage
 
 This is a simple Angular 16 project that demonstrates navigation between a homepage and a registration form using Angular Material. 
 
@@ -21,9 +21,7 @@ This is a simple Angular 16 project that demonstrates navigation between a homep
 ![image](https://github.com/user-attachments/assets/df04fe31-554a-4851-b371-c08458046236)
 
 
-
-
-
+![image](https://github.com/user-attachments/assets/20a0801a-1df0-4f10-8c80-590ffa047435)
 
 
 
