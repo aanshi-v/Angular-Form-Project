@@ -7,7 +7,7 @@ This is a simple Spring Boot REST API backend designed to work with an Angular 1
 - Java 17+ 
 - Spring Boot
 - Spring Web (REST APIs)
-- Spring Data JPA (Optional)
+- Spring Data JPA
 - PostgreSQL
 - Maven
 
