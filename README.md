@@ -1,4 +1,36 @@
-# A2
+![image](https://github.com/user-attachments/assets/63b0df61-1c52-4027-962a-2cc14f2a6761)# Angular 16 Registration Homepage
+
+This is a simple Angular 16 project that demonstrates navigation between a homepage and a registration form using Angular Material. 
+
+## 🔧 Tech Stack
+
+- Angular 16
+- Angular Material
+- HTML & CSS
+- TypeScript
+
+## 🚀 Features
+
+- Home page with 3 buttons
+- First button navigates to a registration form
+- Clean UI with Angular Material components
+- Modular Angular project structure
+
+## 📸 Screenshots
+
+![image](https://github.com/user-attachments/assets/df04fe31-554a-4851-b371-c08458046236)
+
+
+
+
+
+
+
+
+---
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
