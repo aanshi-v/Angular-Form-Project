@@ -1,6 +1,6 @@
 # Angular 16 Registration Homepage
 
-This is a simple Angular 16 project that demonstrates navigation between a homepage and a registration form using Angular Material. 
+This is a simple Angular 16 project that demonstrates navigation between a homepage and a registration form using Angular Material. It is connected to backend **Spring Boot REST APIs** for submitting registration data.
 
 ## 🔧 Tech Stack
 
@@ -8,13 +8,22 @@ This is a simple Angular 16 project that demonstrates navigation between a homep
 - Angular Material
 - HTML & CSS
 - TypeScript
+- Spring Boot (REST APIs)
 
 ## 🚀 Features
 
 - Home page with 3 buttons
 - First button navigates to a registration form
-- Clean UI with Angular Material components
-- Modular Angular project structure
+- Registration form connected to backend Spring Boot API
+- Clean and responsive UI with Angular Material components
+- Modular and maintainable Angular project structure
+
+## 🌐 Backend Integration
+
+- Angular communicates with Spring Boot using HTTP client (`HttpClientModule`)
+- Form data is posted to a Spring Boot REST API endpoint
+- API integration allows real-time data submission
+
 
 ## 📸 Screenshots
 
