@@ -1,0 +1,11 @@
+
+<mat-toolbar color="primary">
+ <button mat-button>
+  <a routerLink="/home" (click)="homeBtnClick()"><mat-icon class="homeicon">home</mat-icon></a>
+</button>
+<button mat-button class="ms-auto">
+  <a routerLink="/admin" (click)="adminBtnClick()"><i class="bi bi-person-fill"></i></a>
+</button>
+  </mat-toolbar>
+ <!-- here home is the path in app-ruting.module.ts-->
+ <!-- here homeBtnClick() is a method in navbar.component.ts -->

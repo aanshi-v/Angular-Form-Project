@@ -1,0 +1,170 @@
+<h1>Registered Data</h1>
+
+<div class="container">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>customerId</th>
+                <th>firstName</th>
+                <th>middleName</th>
+                <th>lastName</th>
+                <th>mobileNo</th>
+                <th>emailId</th>
+                <th>dateOfBirth</th>
+                <th>aadhaarNo</th>
+                <th>birthCertificate</th>
+                <th>salarySlips</th>
+                <th>gstrFiling</th>
+                <th>regDate</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let reg of data2">
+                <td>{{ reg.customerId }}</td>
+                <td>{{ reg.firstName }}</td>
+                <td>{{ reg.middleName }}</td>
+                <td>{{ reg.lastName }}</td>
+                <td>{{ reg.mobileNo }}</td>
+                <td>{{ reg.emailId }}</td>
+                <td>{{ reg.dateOfBirth }}</td>
+                <td>{{ reg.aadhaarNo }}</td>
+                <td>{{ reg.birthCertificate }}</td>
+                <td>{{ reg.salarySlips }}</td>
+                <td>{{ reg.gstrFiling }}</td>
+                <td>{{ reg.regDate }}</td>
+                <td><button type="button" mat-raised-button color="primary"   data-bs-toggle="modal" data-bs-target="#exampleModal"  (click)="edit(reg)"   >Edit</button></td>
+                <td><button type="button" mat-raised-button color="warn" (click)="deleteRegisDataById(reg)" >Delete</button></td>
+            </tr>      
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Update Registered Data</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+
+            <form (ngSubmit) = "updateRegsData()">
+                <table width=1000 >
+                  <tr>
+                    <td>
+                      <label>First Name: </label>
+                    </td>
+                    <td>
+                    <mat-form-field class="field2" appearance="outline">
+                      <mat-label>Enter First Name</mat-label>
+                      <input name="firstName" [(ngModel)]="data.firstName" matInput>
+                    </mat-form-field>
+                    </td>
+                    <td>
+                      <label>Date of Birth: </label>
+                    </td>
+                    <td>
+                    <mat-form-field class="field2" appearance="outline">
+                        <mat-label>Enter Date of Birth</mat-label>
+                        <input name="dateOfBirth" [(ngModel)]="data.dateOfBirth" matInput>
+                      </mat-form-field>
+                    </td>
+                  </tr>
+            
+                  <tr>
+                    <td><label>Last Name: </label></td>
+                    <td>
+            <mat-form-field class="field2" appearance="outline">
+                <mat-label>Enter Last Name</mat-label>
+                <input name="lastName" [(ngModel)]="data.lastName" matInput>
+              </mat-form-field>
+                    </td>
+                    <td><label>Aadhaar No: </label></td>
+                    <td>
+                <mat-form-field class="field2" appearance="outline">
+                    <mat-label>Enter Aadhaar No</mat-label>
+                    <input name="aadhaarNo" [(ngModel)]="data.aadhaarNo" matInput>
+                  </mat-form-field>
+                    </td>
+                  </tr>
+            
+                  <tr>
+                    <td><label>Middle Name: </label></td>
+                    <td>
+                      <mat-form-field class="field2" appearance="outline">
+                          <mat-label>Enter Middle Name</mat-label>
+                          <input name="middleName" [(ngModel)]="data.middleName" matInput>
+                        </mat-form-field>
+                    </td>
+                    <td><label>Document Proofs Submitted: </label></td>
+                    <td>
+                      <mat-radio-group (change)="radioSelected($event)">
+                           <mat-radio-button name="birthCertificate" [(ngModel)]="data.birthCertificate"  class="radio" value="Y">Birth Certificate</mat-radio-button>
+                      </mat-radio-group><br>
+                    </td>
+                  </tr>
+            
+                  <tr>
+                    <td><label>Mobile Number: </label></td>
+                    <td>
+                      <mat-form-field class="field2" appearance="outline">
+                        <mat-label>Enter Mobile Number</mat-label>
+                        <input name="mobileNo" [(ngModel)]="data.mobileNo" matInput>
+                      </mat-form-field>
+                    </td>
+                    <td><label>Income documents: </label></td>
+                    <td>
+                      <mat-radio-group (change)="radioSelected2($event)">
+                        <mat-radio-button name="salarySlips" [(ngModel)]="data.salarySlips" class="radio" value="Yes">Salary Slips</mat-radio-button><br><br>
+                        <mat-radio-button name="gstrFiling" [(ngModel)]="data.gstrFiling" class="radio" value="No">GSTR Filing</mat-radio-button>
+                      </mat-radio-group>
+                    </td>
+                  </tr>
+            
+                  <tr>
+                    <td><label>Email ID: </label></td>
+                    <td>
+              <mat-form-field class="field2" appearance="outline">
+                <mat-label>Enter Email ID</mat-label>
+                <input type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" name="emailId" [(ngModel)]="data.emailId" matInput>
+              </mat-form-field>
+                    </td>
+
+                    <td><label>CustomerId: </label></td>
+                    <td>
+                        <mat-form-field class="field2" appearance="outline">
+                          <mat-label>CustomerId</mat-label>
+                          <input disabled name="customerId" [(ngModel)]="data.customerId" matInput>
+                        </mat-form-field>
+                      </td>
+                  </tr>
+                </table>
+            
+                <div class="text-center">
+                  <button type="submit" mat-raised-button color="primary">Update</button>&nbsp;&nbsp;
+                  <button type="reset" mat-raised-button color="accent">Reset</button>
+                </div>
+              </form>
+          
+            
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  

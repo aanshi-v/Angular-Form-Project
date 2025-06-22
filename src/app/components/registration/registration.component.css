@@ -1,0 +1,38 @@
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.field{
+    width: 20%;
+}
+
+.field2{
+    width: 100%;
+}
+
+.container1{
+   text-align: center;
+}
+
+label{
+    padding: 20px
+}
+
+button{
+    margin: 5px;
+}
+
+table{
+    margin: 0 auto;
+}
+
+.radio{
+    margin-left: -180px;
+    
+}
+
+
+
+

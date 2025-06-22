@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.img1{
+    width: 350px;
+    height: 300px;
+}
+
+table{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.btnreg{  
+   position: absolute;
+   top: 30%;
+}
+
+a{
+    font-size: 20px;
+    margin-right: 70px;
+    width: 250px;
+}
+

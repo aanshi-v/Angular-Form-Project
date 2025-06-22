@@ -1,0 +1,18 @@
+
+<div>
+    <h1>Home Page</h1>
+    <table >
+    <tr>
+        <td>
+    <img class="img1" src="../../assets/banklogo.png" />
+</td>
+<!-- here /registration is the path in app-ruting.module.ts-->
+<!-- here regBtnClick() is a method in home.component.ts-->
+<td>
+ <a class="btnreg" routerLink="/registration" mat-raised-button color="primary" (click)="regBtnClick()">Customer Register</a><br><br><br><br><br><br>
+ <a class="btnCusLog" routerLink="/customerLogin" mat-raised-button color="primary" (click)="cusLogBtnClick()">Customer Login</a><br><br><br>
+ <a class="btnbankMaLog" routerLink="/bankManagerLogin" mat-raised-button color="primary" (click)="banMaLogBtnClick()">Bank Manager Login</a>
+</td>
+</tr>
+</table>
+</div>

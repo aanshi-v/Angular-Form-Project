@@ -1,0 +1,164 @@
+<h1>Customer Registration Page</h1>
+<!--
+<div class="container1">
+  <form (ngSubmit) = "doSubmitForm()"> 
+<label>First Name: </label>
+<mat-form-field class="field" appearance="outline">
+    <mat-label>Input</mat-label>
+    <input name="firstName" [(ngModel)]="data.firstName" matInput>
+  </mat-form-field>
+  <label>Date of Birth: </label>
+    <mat-form-field class="field" appearance="outline">
+        <mat-label>Input</mat-label>
+        <input name="dateOfBirth" [(ngModel)]="data.dateOfBirth" matInput>
+      </mat-form-field><br>
+
+  <label>Last Name: </label>
+<mat-form-field class="field" appearance="outline">
+    <mat-label>Input</mat-label>
+    <input name="lastName" [(ngModel)]="data.lastName" matInput>
+  </mat-form-field>
+  <label>Aadhaar No: </label>
+    <mat-form-field class="field" appearance="outline">
+        <mat-label>Input</mat-label>
+        <input name="aadhaarNo" [(ngModel)]="data.aadhaarNo" matInput>
+      </mat-form-field><br> 
+
+  <label>Middle Name: </label>
+<mat-form-field class="field" appearance="outline">
+    <mat-label>Input</mat-label>
+    <input name="middleName" [(ngModel)]="data.middleName" matInput>
+  </mat-form-field>
+  <label>Document Proofs Submitted: </label>
+  <mat-radio-group>
+    <mat-radio-button name="birthCertificate" [(ngModel)]="data.birthCertificate" class="radio" value="1">Birth Certificate</mat-radio-button>
+  </mat-radio-group><br>
+
+  <label>Mobile Number: </label>
+  <mat-form-field class="field" appearance="outline">
+    <mat-label>Input</mat-label>
+    <input name="mobileNo" [(ngModel)]="data.mobileNo" matInput>
+  </mat-form-field>
+  <label>Income documents: </label>
+  <mat-radio-group>
+    <mat-radio-button name="salarySlips" [(ngModel)]="data.salarySlips" class="radio" value="1">Salary Slips</mat-radio-button>
+    <mat-radio-button name="gstrFiling" [(ngModel)]="data.gstrFiling" class="radio" value="2">GSTR Filing</mat-radio-button>
+  </mat-radio-group><br>
+
+  <label>Email ID: </label>
+  <mat-form-field class="field" appearance="outline">
+    <mat-label>Input</mat-label>
+    <input name="emailId" [(ngModel)]="data.emailId" matInput>
+  </mat-form-field>
+
+  <div class="text-center">
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+    <button type="reset" mat-raised-button color="accent">Reset</button>
+  </div>
+
+</form>
+{{ data | json }}
+</div>
+-->
+
+
+
+
+<div class="container1">
+  <form (ngSubmit) = "doSubmitForm()">
+    <table width=1000 >
+      <tr>
+        <td>
+          <label>First Name: </label>
+        </td>
+        <td>
+        <mat-form-field class="field2" appearance="outline">
+          <mat-label>Enter First Name</mat-label>
+          <input name="firstName" [(ngModel)]="data.firstName" matInput>
+        </mat-form-field>
+        </td>
+        <td>
+          <label>Date of Birth: </label>
+        </td>
+        <td>
+        <mat-form-field class="field2" appearance="outline">
+            <mat-label>Enter Date of Birth</mat-label>
+            <input name="dateOfBirth" [(ngModel)]="data.dateOfBirth" matInput>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label>Last Name: </label></td>
+        <td>
+<mat-form-field class="field2" appearance="outline">
+    <mat-label>Enter Last Name</mat-label>
+    <input name="lastName" [(ngModel)]="data.lastName" matInput>
+  </mat-form-field>
+        </td>
+        <td><label>Aadhaar No: </label></td>
+        <td>
+    <mat-form-field class="field2" appearance="outline">
+        <mat-label>Enter Aadhaar No</mat-label>
+        <input name="aadhaarNo" [(ngModel)]="data.aadhaarNo" matInput>
+      </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label>Middle Name: </label></td>
+        <td>
+          <mat-form-field class="field2" appearance="outline">
+              <mat-label>Enter Middle Name</mat-label>
+              <input name="middleName" [(ngModel)]="data.middleName" matInput>
+            </mat-form-field>
+        </td>
+        <td><label>Document Proofs Submitted: </label></td>
+        <td>
+          <mat-radio-group (change)="radioSelected($event)">
+               <mat-radio-button name="birthCertificate" [(ngModel)]="data.birthCertificate"  class="radio" value="Y">Birth Certificate</mat-radio-button>
+          </mat-radio-group><br>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label>Mobile Number: </label></td>
+        <td>
+          <mat-form-field class="field2" appearance="outline">
+            <mat-label>Enter Mobile Number</mat-label>
+            <input name="mobileNo" [(ngModel)]="data.mobileNo" matInput>
+          </mat-form-field>
+        </td>
+        <td><label>Income documents: </label></td>
+        <td>
+          <mat-radio-group (change)="radioSelected2($event)">
+            <mat-radio-button name="salarySlips" [(ngModel)]="data.salarySlips" class="radio" value="Yes">Salary Slips</mat-radio-button><br><br>
+            <mat-radio-button name="gstrFiling" [(ngModel)]="data.gstrFiling" class="radio" value="No">GSTR Filing</mat-radio-button>
+          </mat-radio-group>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label>Email ID: </label></td>
+        <td>
+  <mat-form-field class="field2" appearance="outline">
+    <mat-label>Enter Email ID</mat-label>
+ <!--  <input type="email" name="emailId" [(ngModel)]="data.emailId" matInput>  -->
+    <input type="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" name="emailId" [(ngModel)]="data.emailId" matInput>
+  </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <div class="text-center">
+      <button type="submit" mat-raised-button color="primary">Submit</button>
+      <button type="reset" mat-raised-button color="accent">Reset</button>
+    </div>
+  </form>
+<br><br>
+
+<!---  {{ data | json }} -->
+
+<br><br><br><br>
+</div>
+
